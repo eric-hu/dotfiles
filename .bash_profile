@@ -135,3 +135,11 @@ export PS1="\[\e[32m\]\h:\[\e[35m\]\w \[\e[33m\]\u \[\e[31m\]\`git branch 2> /de
 export PS1="\[$(tput setaf 1)\]\$RUBY_ENGINE \$RUBY_VERSION\[$(tput sgr0)\] $PS1"
 
 source ~/.bash_profile_circle
+
+# Iterm2 shell integration
+# Enables:
+#   marks
+#   iterm2 command history
+#   frequency/recent directories
+#   drag/drop files to/from remote
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
