@@ -319,6 +319,8 @@ nnoremap \ :Ag<SPACE>
 " F4: search for word under key
 nnoremap <F4> :execute "Ag " . expand("<cword>") <Bar> cw<CR>
 nnoremap <S-F4> :execute "Ag " . expand("<cword>") .  " %" <Bar> cw<CR>
+" specify ag flags
+let g:ag_prg="ag --vimgrep --hidden"
 
 "   ------------- Meta Editing-------------
 " ev: Edit Vimrc
@@ -398,10 +400,10 @@ runtime macros/matchit.vim
 " Use ag (silver searcher) to power Ctrl-P if available
 if executable("ag")
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --depth 8 -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --depth 8 -g "" --hidden'
 
   " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=ag\ --nogroup\ --nocolor\ --hidden
 endif
 
 " Ctrl-P custom ignore: do not scan the vendor folder (for large Rails projects)
