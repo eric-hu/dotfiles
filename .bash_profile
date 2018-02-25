@@ -134,7 +134,7 @@ export PS1="\[\e[32m\]\h:\[\e[35m\]\w \[\e[33m\]\u \[\e[31m\]\`git branch 2> /de
 #export PS1="[$(ruby -v | grep -o 'ruby ([^\( ]*)')] \h:\W \u$PS1"
 export PS1="\[$(tput setaf 1)\]\$RUBY_ENGINE \$RUBY_VERSION\[$(tput sgr0)\] $PS1"
 
-source ~/.bash_profile_circle
+test -e ~/.bash_profile_circle && source ~/.bash_profile_circle
 
 # Iterm2 shell integration
 # Enables:
