@@ -25,3 +25,5 @@
 	name = Eric Hu
 [push]
 	default = current
+[pull]
+	default = current
