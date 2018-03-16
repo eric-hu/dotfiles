@@ -157,10 +157,6 @@ if has("unix")
     " functions for search/replace to replace text while preserving case
     Plugin 'keepcase.vim'
 
-    " vim-coffee-script
-    " Coffeescript syntax highlighting
-    Plugin 'kchmck/vim-coffee-script'
-
     " Haml
     " Github mirror of vim-haml, syntax highlighting for haml files
     Plugin 'tpope/vim-haml'
