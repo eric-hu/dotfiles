@@ -101,10 +101,8 @@ augroup END
 
 
 " Set default colorscheme
-autocmd BufEnter * colorscheme molokai
-" Set colorscheme for Clojure filetypes
-autocmd BufEnter *.clj colorscheme koehler
-autocmd BufEnter *.clj setlocal background=light
+autocmd VimEnter * colorscheme molokai
+autocmd BufEnter *.clj setlocal background=dark
 
 " Enable spell check on markdown files
 autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell
@@ -279,6 +277,8 @@ let g:session_autoload = 'yes'
 
 " =================  Rainbow (Clojure parents) highlighting ==================
 let g:rainbow_active = 1
+au BufEnter *.clj RainbowParenthesesLoadRound
+au BufEnter * RainbowParenthesesToggle
 
 " =============== Column width highlighting ===============
 function! HighlightOverlength()
