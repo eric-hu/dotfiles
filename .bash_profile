@@ -63,19 +63,7 @@ fi
 
 # =============== Bash Completion ===============
 # Provides tab-completion for git, among other things.
-
-if [[ $platform == 'linux' ]]; then
-  # enable programmable completion features (you don't need to enable
-  # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-  # sources /etc/bash.bashrc).
-  if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-      . /etc/bash_completion
-  fi
-elif [[ $platform == 'OSX' ]]; then
-  if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-  fi
-fi
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # bind history-completion to pageup and pagedown
 bind '"\e[5~": history-search-backward'
@@ -143,3 +131,4 @@ test -e ~/.bash_profile_circle && source ~/.bash_profile_circle
 #   frequency/recent directories
 #   drag/drop files to/from remote
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
