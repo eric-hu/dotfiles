@@ -1,7 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -83,27 +79,17 @@ if [[ $platform == 'OSX' ]]; then
   # Node/Homebrew
   export NODE_PATH="/usr/local/lib/node"
 
-  # QT5.5/Homebrew (capybara-webkit)
-   export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
-
   # NPM
   export PATH="/usr/local/share/npm/bin:$PATH"
 
   # Cargo
   export PATH="/Users/erichu/.cargo/bin:$PATH"
-
-  # Android sdk
-  export ANDROID_HOME="/usr/local/opt/android-sdk"
 fi
 
 
 # ========== Go ==========
-export GOPATH=/Users/Shared/go_apps
 export PATH=$PATH:$GOPATH/bin
 
-
-# ========== Clojure ==========
-export LEIN_FAST_TRAMPOLINE=y
 
 # ==================================  Gaming ===================================
 alias traceroute_battle_net_us_1="traceroute 12.129.202.154"
