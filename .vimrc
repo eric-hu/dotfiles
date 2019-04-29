@@ -299,15 +299,16 @@ augroup END
 
 " ========================  Custom keys and mappings =========================
 " <ESC> Removes text highlighting on last search
-if has('gui_running')
-  nnoremap <silent> <esc> :nohlsearch<return><esc>
-else
-  " wrap code from above in an event that gets called when vim is done
-  " initalizing
-  augroup no_highlight
-    autocmd TermResponse * nnoremap <esc> :noh<return><esc>
-  augroup END
-end
+" FIXME: this block starts up vim and macvim with some modified contents
+"if has('gui_running')
+"  nnoremap <silent> <esc> :nohlsearch<return><esc>
+"else
+"  " wrap code from above in an event that gets called when vim is done
+"  " initalizing
+"  augroup no_highlight
+"    autocmd TermResponse * nnoremap <esc> :noh<return><esc>
+"  augroup END
+"end
 
 " -------------------------------  Searching --------------------------------
 " Bind Ag.vim to \
