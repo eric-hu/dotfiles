@@ -165,7 +165,7 @@ if has("unix")
 
     " vim-session
     " Smarter-than-default session manager, compatible with NERDTree
-    Plugin 'xolox/vim-session'
+    " Plugin 'xolox/vim-session'
 
     " vim-misc
     " Dependency for vim-session
