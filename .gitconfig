@@ -7,22 +7,18 @@
 	editor = vim
 	excludesfile = ~/.gitignore-global
 	ignorecase = false
-[user]
 [github]
 	user = eric-hu
-	token = 6ffb04da5b7a7cf959e5e2daeacd1589
+#	token = visit https://github.com/settings/tokens to generate a new one
 [credential]
-  # Set the credential helper to streamline HTTPS git authentication.  This
-  # configuration is more portable than git:// authentication, as public keys
-  # don't need to be shared
-	helper = osxkeychain
-[push]
-  #default = simple
+# Set the credential helper to streamline HTTPS git authentication.  This
+# configuration is more portable than git:// authentication, as public keys
+# don't need to be shared. However, you will need to set a token under [github]
+# if 2FA is enabled.
+#  helper = osxkeychain
 [user]
-[user]
-[user]
-	email = hu.eric@gmail.com
 	name = Eric Hu
+  email = 676307+eric-hu@users.noreply.github.com
 [push]
 	default = current
 [pull]
