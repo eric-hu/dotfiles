@@ -111,8 +111,9 @@ alias traceroute_battle_net_us_2="traceroute 199.108.62.157"
 
 export PATH="$PATH:/usr/local/sbin"
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+# chruby
+# source /usr/local/opt/chruby/share/chruby/chruby.sh
+# source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # Prompt
 # set bash prompt: color
