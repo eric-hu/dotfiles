@@ -71,7 +71,7 @@ export ARCHFLAGS='-arch x86_64'
 # ====== OS Specific settings =======
 if [[ $platform == 'OSX' ]]; then
   # Set the term editor
-  export VISUAL='mvim -f -c "au VimLeave * !open -a iterm"'
+  export VISUAL='nvim -f -c "au VimLeave * !open -a iterm"'
 
   # Homebrew: Load /usr/local/bin before /usr/bin
   export PATH="/usr/local/bin:$PATH"

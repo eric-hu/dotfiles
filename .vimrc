@@ -41,7 +41,9 @@ set nowrap
 " Time in ms to wait after each key input to decide if a sequence is finished
 set timeoutlen=333
 
-set spell spelllang=en_us
+if !has("nvim")
+  set spell spelllang=en_us
+endif
 
 " ---------  Formatting (some of these are for coding in C and C++) ----------
 " Tabs are 2 spaces
