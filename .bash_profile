@@ -123,3 +123,22 @@ if [[ ! -z "$RUBY_ENGINE" ]] && [[ ! -z "$RUBY_VERSION" ]] ; then
   export PS1="\[$(tput setaf 1)\]\$RUBY_ENGINE \$RUBY_VERSION\[$(tput sgr0)\] $PS1"
 fi
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/erichu/google-cloud-sdk/path.bash.inc' ]; then . '/Users/erichu/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/erichu/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/erichu/google-cloud-sdk/completion.bash.inc'; fi
+
+# Google Cloud SDK (tries to use Python 2 by default)
+export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
+
+
+# Set up saml2aws as the default auth method for AWS
+export  AWS_PROFILE=saml
+
+# Set the vim runtime so installation time extensions can be found. I don't
+# know why VIMRUNTIME points to an old install of neovim. This is set in bash
+# startup, and I couldn't track it down.
+#
+VIMRUNTIME=/usr/local/Cellar/vim/8.2.2750/share/vim/vim82/
