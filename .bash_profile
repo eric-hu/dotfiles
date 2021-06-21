@@ -70,7 +70,7 @@ export ARCHFLAGS='-arch x86_64'
 # ====== OS Specific settings =======
 if [[ $platform == 'OSX' ]]; then
   # Set the term editor
-  export VISUAL='nvim -f -c "au VimLeave * !open -a iterm"'
+  export VISUAL='nvim'
 
   # Homebrew: Load /usr/local/bin before /usr/bin
   export PATH="/usr/local/bin:$PATH"
@@ -80,6 +80,9 @@ if [[ $platform == 'OSX' ]]; then
 
   # NPM
   export PATH="/usr/local/share/npm/bin:$PATH"
+
+  # Yarn
+  export PATH="$(yarn global bin):$PATH"
 
   # Cargo
   export PATH="/Users/erichu/.cargo/bin:$PATH"

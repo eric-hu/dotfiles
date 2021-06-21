@@ -236,6 +236,15 @@ if has("unix")
     " 
     Plugin 'vim-scripts/improved-ansiesc'
 
+    " typescript-vim: syntax highlighting for Typescript
+    Plugin 'leafgarland/typescript-vim'
+    "
+    " vim-jsx-typescript: syntax highlighting for React Typescript files
+    Plugin 'peitalin/vim-jsx-typescript'
+
+    " prettier/vim-prettier: js and typescript formatting
+    Plugin 'prettier/vim-prettier'
+
     call vundle#end()
 
   else
