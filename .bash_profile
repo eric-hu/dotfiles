@@ -126,3 +126,7 @@ if [[ ! -z "$RUBY_ENGINE" ]] && [[ ! -z "$RUBY_VERSION" ]] ; then
   export PS1="\[$(tput setaf 1)\]\$RUBY_ENGINE \$RUBY_VERSION\[$(tput sgr0)\] $PS1"
 fi
 
+
+# ===============================  ALIASES ================================
+alias resumes="cd /Users/erichu/Dropbox/Documents/resumes/template"
+
