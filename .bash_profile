@@ -139,3 +139,4 @@ fi
 # ===============================  ALIASES ================================
 alias resumes="cd /Users/erichu/Dropbox/Documents/resumes/template"
 
+alias taxes="cd /Users/erichu/Dropbox/2020\ taxes"
