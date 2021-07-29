@@ -132,10 +132,6 @@ if has("unix")
     " git integration into vim
     Plugin 'tpope/vim-fugitive'
 
-    "vim-rails
-    " Syntax highlighting and key mappings for Ruby on Rails
-    Plugin 'tpope/vim-rails'
-
     " Linediff
     " Diff selections.  Can be from the same file.
     " :Linediff and :LinediffReset
@@ -161,22 +157,6 @@ if has("unix")
     " Github mirror of vim-haml, syntax highlighting for haml files
     Plugin 'tpope/vim-haml'
 
-    " vim-airline
-    " Formatted and colored status bar
-    Plugin 'bling/vim-airline'
-
-    " vim-session
-    " Smarter-than-default session manager, compatible with NERDTree
-    " Plugin 'xolox/vim-session'
-
-    " vim-misc
-    " Dependency for vim-session
-    Plugin 'xolox/vim-misc'
-
-    " YouCompleteMe
-    " Intelligent code-completion, works with several popular languages
-    "Plugin 'Valloric/YouCompleteMe'
-
     " vim-surround
     " Mothballed for now, install if HTML/XML work will be common
     Plugin 'tpope/vim-surround'
@@ -185,31 +165,12 @@ if has("unix")
     " Fuzzy-find files in a project folder
     Plugin 'kien/ctrlp.vim.git'
 
-    " Slim
-    Plugin 'slim-template/vim-slim'
-
     " endwise.vim
     " autocompletion for blocks and other snippets
     Plugin 'endwise.vim'
 
-    " vim-clojure-static
-    " clojure runtime files, older version included with vim 7.3.803+
-    " installing newer version to track newest features
-    Plugin 'guns/vim-clojure-static'
-
-    " rainbow
-    " clojure rainbow paren highlighting
-    "Plugin 'luochen1990/rainbow'
-    Plugin 'rainbow_parentheses.vim'
-
-    " fireplace
-    Plugin 'tpope/vim-fireplace'
-
     " Molokai colorscheme
     Plugin 'molokai'
-
-    " Dash (code documentation tool) integration
-    Plugin 'rizzatti/dash.vim'
 
     " Terminus
     Plugin 'wincent/terminus'
@@ -220,50 +181,18 @@ if has("unix")
     " Splitjoin: expand and contract single line statements
     Plugin 'splitjoin.vim'
 
-    " vim-elixir: syntax highlighting, indentation and filetype detection for
-    " Elixir
-    Plugin 'elixir-lang/vim-elixir'
-
-    " vim-rspec for colored Rspec
-    Plugin 'thoughtbot/vim-rspec'
-
-    " vim-go: Golang development plugin
-    Plugin 'fatih/vim-go'
-
     " vim-tintin: syntax highlighting for tintin files
     Plugin 'LokiChaos/vim-tintin'
 
     " 
     Plugin 'vim-scripts/improved-ansiesc'
 
-    " typescript-vim: syntax highlighting for Typescript
-    Plugin 'leafgarland/typescript-vim'
-    "
-    " vim-jsx-typescript: syntax highlighting for React Typescript files
-    Plugin 'peitalin/vim-jsx-typescript'
-
-    " prettier/vim-prettier: js and typescript formatting
-    Plugin 'prettier/vim-prettier'
-
     call vundle#end()
 
   else
-    " ========================  Pathogen (non-Mac only) =======================
-    call pathogen#infect()
-
-    " Run help tag scanner for Pathogen
-    :Helptags
+    " ========================  (non-Mac only) =======================
   endif
 endif
-
-" RSpec.vim settings and mappings
-let g:rspec_runner = "os_x_iterm2"
-
-nnoremap <Leader>rt :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>rs :call RunNearestSpec()<CR>
-nnoremap <Leader>rl :call RunLastSpec()<CR>
-nnoremap <Leader>ra :call RunAllSpecs()<CR>
-
 
 " =============== OS Specific Settings ===============
 " macvim specific settings
@@ -278,18 +207,9 @@ endif
 " Dark background
 set background=dark
 
-" =============== Rails.vim Control Vars and scripts ===============
-" Change which file opens after executing :Rails command
-let g:rails_default_file='config/database.yml'
-
 " =============== Session.vim Config ===============
 let g:session_autosave = 'yes'
 let g:session_autoload = 'yes'
-
-" =================  Rainbow (Clojure parents) highlighting ==================
-let g:rainbow_active = 1
-au BufEnter *.clj RainbowParenthesesLoadRound
-au BufEnter * RainbowParenthesesToggle
 
 " =============== Column width highlighting ===============
 function! HighlightOverlength()
@@ -418,22 +338,6 @@ endif
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](vendor)$',
   \ }
-
-" Git key combinations
-" TODO: map these only if Git is defined
-" First pass tried: `if exists(":Git")`
-" - This failed because :Git is only defined in files checked into a source
-"   repo
-" - More info: http://superuser.com/questions/552323/how-can-i-test-for-plugins-and-only-include-them-if-they-exist-in-vimrc
-" - Next steps:
-"   - Try checking for a top-level Fugitive.vim function
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gca :Gcommit --all --verbose<cr>
-nnoremap <leader>gpoh :Gpush origin head<CR>
-"nnoremap <leader>gpoh :Gpush origin head<CR>
-
-" CircleCI CLI key combinations (Rocky Madden CLI)
-nnoremap <leader>ccb :!circleci-rocky browse<CR>
 
 " Enable syntax hilighting
 " Turn on syntax AFTER loading plugins
