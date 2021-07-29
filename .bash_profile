@@ -52,9 +52,18 @@ export CLICOLOR=1
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [[ -r "/Users/Shared/.aliases" ]] && [[ -f "/Users/Shared/.aliases" ]]; then
- source "/Users/Shared/.aliases";
-fi
+# ls: Bash defaults
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# git
+alias gca='git commit -a'
+alias ga='git add'
+alias gs='git status'
+
+# ruby
+alias be='bundle exec'
 
 # =============== Bash Completion ===============
 # Provides tab-completion for git, among other things.
