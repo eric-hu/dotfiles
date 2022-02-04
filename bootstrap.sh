@@ -2,21 +2,9 @@
 
 DIRECTORY=$(cd `dirname $0` && pwd)
 
-echo "assuming $DIRECTORY for current file path"
+echo "Assuming $DIRECTORY for current file path"
 
-# keep things minimal until I need to expand this
-echo "linking .vimrc"
-DOTFILE=$DIRECTORY"/.vimrc"
-
-# Only link dotfile if it exists
-# Do not overwrite original dotfile
-[ -f "$DOTFILE" ] && ln -sv "$DOTFILE" ~
-
-DOTFILE=$DIRECTORY"/.bash_profile"
-
-# Only link dotfile if it exists
-# Do not overwrite original dotfile
-[ -f "$DOTFILE" ] && ln -sv "$DOTFILE" ~
+# Keep things minimal until I need to expand this
 
 DOTFILE=$DIRECTORY"/.gitconfig"
 
@@ -24,11 +12,13 @@ DOTFILE=$DIRECTORY"/.gitconfig"
 # Do not overwrite original dotfile
 [ -f "$DOTFILE" ] && ln -sv "$DOTFILE" ~
 
+
 DOTFILE=$DIRECTORY"/.gitignore-global"
 
 # Only link dotfile if it exists
 # Do not overwrite original dotfile
 [ -f "$DOTFILE" ] && ln -sv "$DOTFILE" ~
+
 
 DOTFILE=$DIRECTORY"/.inputrc"
 
@@ -36,9 +26,9 @@ DOTFILE=$DIRECTORY"/.inputrc"
 # Do not overwrite original dotfile
 [ -f "$DOTFILE" ] && ln -sv "$DOTFILE" ~
 
-echo "installing Vundle if not installed"
-# Install vundler for vim and macvim
-VUNDLE_HOME=~/.vim/bundle/Vundle.vim
-[ ! -d $VUNDLE_HOME ] &&
-  git clone https://github.com/VundleVim/Vundle.vim.git $VUNDLE_HOME
+
+DOTFILE=$DIRECTORY"/init.vim"
+
+echo "creating neovim config path"
+[ -f "$DOTFILE" ] && mkdir -p ~/.config/nvim && ln -sv "$DOTFILE" ~/.config/nvim
 
