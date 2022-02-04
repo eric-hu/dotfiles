@@ -32,3 +32,9 @@ DOTFILE=$DIRECTORY"/init.vim"
 echo "creating neovim config path"
 [ -f "$DOTFILE" ] && mkdir -p ~/.config/nvim && ln -sv "$DOTFILE" ~/.config/nvim
 
+
+DOTFILE=$DIRECTORY"/.zprofile"
+
+# Only link dotfile if it exists
+# Do not overwrite original dotfile
+[ -f "$DOTFILE" ] && ln -sv "$DOTFILE" ~
