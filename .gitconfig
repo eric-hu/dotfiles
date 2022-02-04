@@ -1,26 +1,13 @@
-[color]
-	status = auto
-	branch = auto
-	diff = auto
-	ui = true
-[core]
-	editor = nvim
-	excludesfile = ~/.gitignore-global
-	ignorecase = false
-[github]
-	user = eric-hu
-#	token = visit https://github.com/settings/tokens to generate a new one
-[credential]
-# Set the credential helper to streamline HTTPS git authentication.  This
-# configuration is more portable than git:// authentication, as public keys
-# don't need to be shared. However, you will need to set a token under [github]
-# if 2FA is enabled.
-#  helper = osxkeychain
 [user]
 	name = Eric Hu
-  email = 676307+eric-hu@users.noreply.github.com
+	email = eric-hu@users.noreply.github.com
+[github]
+	user = eric-hu
 [push]
 	default = current
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/erichu/.gitignore-global
 [pull]
 	default = current
-	rebase = false
