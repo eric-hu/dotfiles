@@ -38,3 +38,10 @@ DOTFILE=$DIRECTORY"/.zprofile"
 # Only link dotfile if it exists
 # Do not overwrite original dotfile
 [ -f "$DOTFILE" ] && ln -sv "$DOTFILE" ~
+
+
+DOTFILE=$DIRECTORY"/.zshrc"
+
+# Only link dotfile if it exists
+# Do not overwrite original dotfile
+[ -f "$DOTFILE" ] && ln -sv "$DOTFILE" ~
