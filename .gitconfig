@@ -11,3 +11,5 @@
 	excludesfile = /Users/erichu/.gitignore-global
 [pull]
 	default = current
+[init]
+	defaultBranch = main
