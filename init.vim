@@ -2,6 +2,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Maximum column width
+set textwidth=100
+
 " Enable line numbers
 set number
 
