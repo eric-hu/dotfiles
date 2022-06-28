@@ -107,3 +107,6 @@ setopt interactivecomments
 
 # load asdf version manager
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Make less print directly to the terminal instead of its own screen that disappears when it exits
+export LESS=-Xr
